@@ -1,0 +1,5 @@
+target/
+.env
+app-image/
+dist/
+.vscode/
