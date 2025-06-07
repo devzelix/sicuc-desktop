@@ -114,8 +114,8 @@ public class CultorDialog extends JDialog {
         emailLabel.setFont(FontStyles.FONT_TITLE.deriveFont(18f));
         emailLabel.setBounds(153, 255, 165, 30);
 
-        // Label showing the cultor's email address
-        JLabel email = new JLabel(cultor.getEmail());
+        // Label email or "No posee" if null
+        JLabel email = new JLabel(cultor.getEmail() == null ? "No posee" : cultor.getEmail());
         email.setForeground(ColorPalette.TEXT_COLOR);
         email.setFont(FontStyles.FONT_TEXT.deriveFont(19f));
         email.setBounds(323, 255, 430, 30);
