@@ -155,9 +155,10 @@ public class CultorDialog extends JDialog {
         // Compose art career details: category, discipline, years of experience
         String artCategory = IdToNameResolver.getArtCategory(cultor.getArtCategoryId());
         String artDiscipline = IdToNameResolver.getArtDiscipline(cultor.getArtDisciplineId());
+        String otherDiscipline = cultor.getOtherDiscipline();
         int yearsOfExperience = cultor.getYearsOfExperience();
         JLabel artCareer = new JLabel(
-                artCategory + ", " + artDiscipline + ", " + yearsOfExperience
+                artCategory + ", " + (otherDiscipline == null ? artDiscipline : otherDiscipline) + ", " + yearsOfExperience
                         + (yearsOfExperience > 1 ? " años de experiencia" : " años de experiencia"));
         artCareer.setForeground(ColorPalette.TEXT_COLOR);
         artCareer.setFont(FontStyles.FONT_TEXT.deriveFont(19f));

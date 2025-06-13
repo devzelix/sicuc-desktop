@@ -46,6 +46,10 @@ public class CultorResponse {
     // Art discipline ID
     private int artDisciplineId;
 
+    // Other Art Discipline
+
+    private String otherDiscipline;
+
     // Total years of experience in the field
     private int yearsOfExperience;
 
@@ -63,11 +67,9 @@ public class CultorResponse {
 
     // Constructor with all fields
     public CultorResponse(int id, String firstName, String lastName, String gender, String idNumber,
-            LocalDate birthDate,
-            String phoneNumber,
-            String email, String instagramUser, int municipalityId, int parishId, String homeAddress, int artCategoryId,
-            int artDisciplineId, int yearsOfExperience, String groupName, String disability, String illness,
-            LocalDate createdAt) {
+            LocalDate birthDate, String phoneNumber, String email, String instagramUser, int municipalityId,
+            int parishId, String homeAddress, int artCategoryId, int artDisciplineId, String otherDiscipline,
+            int yearsOfExperience, String groupName, String disability, String illness, LocalDate createdAt) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -82,6 +84,7 @@ public class CultorResponse {
         this.homeAddress = homeAddress;
         this.artCategoryId = artCategoryId;
         this.artDisciplineId = artDisciplineId;
+        this.otherDiscipline = otherDiscipline;
         this.yearsOfExperience = yearsOfExperience;
         this.groupName = groupName;
         this.disability = disability;
@@ -201,6 +204,14 @@ public class CultorResponse {
 
     public void setArtDisciplineId(int artDisciplineId) {
         this.artDisciplineId = artDisciplineId;
+    }
+
+    public String getOtherDiscipline() {
+        return otherDiscipline;
+    }
+
+    public void setOtherDiscipline(String otherDiscipline) {
+        this.otherDiscipline = otherDiscipline;
     }
 
     public int getYearsOfExperience() {
